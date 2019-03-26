@@ -24,7 +24,7 @@ var (
 	)
 	values = prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{
-			Name: "loxone_value",
+			Name: "loxone_values",
 			Help: "Current Value of changes",
 		},
 		[]string{"control", "room", "type", "cat", "state"},
