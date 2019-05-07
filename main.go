@@ -36,6 +36,10 @@ func main() {
 	log.SetOutput(os.Stdout)
 	log.SetLevel(log.InfoLevel)
 
+	log.SetFormatter(&log.TextFormatter{
+		FullTimestamp: true,
+	})
+
 	// Parse arguments
 	host := flag.String("host", "", "Loxone Host Name")
 	user := flag.String("user", "", "Loxone User Name")
