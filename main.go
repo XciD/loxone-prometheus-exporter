@@ -7,11 +7,11 @@ import (
 	"os"
 	"time"
 
+	loxone "github.com/XciD/loxone_ws"
 	"github.com/bep/debounce"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	log "github.com/sirupsen/logrus"
-	loxone "github.com/xcid/loxonews"
 )
 
 var (

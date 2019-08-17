@@ -1,0 +1,45 @@
+run:
+  tests: false
+  skip-dirs:
+    - pkg/generated
+    - vendor$
+output:
+  format: colored-line-number
+  print-issued-lines: true
+  print-linter-name: true
+linters:
+  disable:
+    - typecheck
+    - unparam
+  enable:
+    - varcheck
+    - unused
+    - staticcheck
+    - ineffassign
+    - govet
+    - gosimple
+    - errcheck
+    - deadcode
+    - gofmt
+    - goimports
+    - unconvert
+    - misspell
+    - bodyclose
+    - depguard
+    - dupl
+    - goconst
+    - gocritic
+    - gocyclo
+    - gofmt
+    - goimports
+    - golint
+    - gosec
+    - interfacer
+    - maligned
+    - misspell
+    - nakedret
+    - prealloc
+    - scopelint
+    - stylecheck
+    - unconvert
+  fast: false

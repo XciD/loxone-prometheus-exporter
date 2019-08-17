@@ -10,7 +10,7 @@ init:
 
 .PHONY: lint
 lint:
-	GO111MODULE=off $(GOPATH)/bin/gometalinter --disable-all --config .gometalinter.json ./...
+	golangci-lint run --config golangci.yml
 
 .PHONY: build
 build:
@@ -18,5 +18,5 @@ build:
 
 .PHONY: format
 format:
-	gofmt -w -s .
-	goimports -w .
+	go fmt $(go list)
+	goimports -e -w -d $(shell find . -type f -name '*.go' -print)
