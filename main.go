@@ -92,7 +92,7 @@ func main() {
 
 		for stateName, stateValue := range control.States {
 			// Can be a string or a float...
-			switch stateValue.(type) {
+			switch stateValue := stateValue.(type) {
 			case string:
 				// Create the target map
 				currentLabel := prometheus.Labels{}
@@ -100,9 +100,9 @@ func main() {
 					currentLabel[key] = value
 				}
 				currentLabel["state"] = stateName
-				globalStates[stateValue.(string)] = newEventMetric(&currentLabel)
+				globalStates[stateValue] = newEventMetric(&currentLabel)
 			case []string:
-				for index, childStateValue := range stateValue.([]string) {
+				for index, childStateValue := range stateValue {
 					// Create the target map
 					currentLabel := prometheus.Labels{}
 					for key, value := range labels {
