@@ -84,9 +84,9 @@ func main() {
 
 		labels := map[string]string{
 			"control": control.Name,
-			"room":    loxoneConfig.Rooms[control.Room].Name,
+			"room":    loxoneConfig.RoomName(control.Room),
 			"type":    control.Type,
-			"cat":     loxoneConfig.Cats[control.Cat].Name,
+			"cat":     loxoneConfig.CatName(control.Cat),
 			"state":   "",
 		}
 
