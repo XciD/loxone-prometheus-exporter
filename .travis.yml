@@ -10,7 +10,6 @@ before_install:
 - make init
 
 script:
-- make test
 - make cover
 
 after_success:
