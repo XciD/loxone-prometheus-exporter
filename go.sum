@@ -1,5 +1,5 @@
-github.com/XciD/loxone_ws v0.0.0-20190817100509-373e978bcb1b h1:XR4wmZjYosIzq07zttADrQ1XrQ1QXOX6WZSbe9VeDRc=
-github.com/XciD/loxone_ws v0.0.0-20190817100509-373e978bcb1b/go.mod h1:haMgW+VWKPH+WBwDtxvCm5MxnYAPMJf6CO0P6Nnev1c=
+github.com/XciD/loxone-ws v0.0.0-20191014074227-fa47c6fc48ff h1:q3SXPwq75yEzD61O0Rb/1KnDUIrIySuasvYsum93BpE=
+github.com/XciD/loxone-ws v0.0.0-20191014074227-fa47c6fc48ff/go.mod h1:x7VRdIefHHKDWfJGE1cAMjgr6bhaikb6Bn51OO0tylE=
 github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc/go.mod h1:LOuyumcjzFXgccqObfd/Ljyb9UuFJ6TxHnclSeseNhc=
 github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf/go.mod h1:ybxpYRFXyAe+OPACYpWeL0wqObRcbAqCMya13uyzqw0=
 github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973/go.mod h1:Dwedo/Wpr24TaqPxmxbtue+5NUziq4I4S80YR8gNf3Q=

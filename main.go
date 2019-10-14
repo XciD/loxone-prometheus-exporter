@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	loxone "github.com/XciD/loxone_ws"
+	loxone "github.com/XciD/loxone-ws"
 	"github.com/bep/debounce"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
@@ -54,7 +54,7 @@ func main() {
 	prometheus.MustRegister(values)
 
 	// Open socket
-	lox, err := loxone.Connect(*host, *user, *password)
+	lox, err := loxone.New(*host, *user, *password)
 
 	if err != nil {
 		log.Error(err)
