@@ -1,0 +1,3 @@
+host: "192.0.2.0"
+user: "testuser"
+password: "supersecretpassword"
