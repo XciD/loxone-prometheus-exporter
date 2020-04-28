@@ -2,10 +2,11 @@ package main
 
 import (
 	"context"
-	"flag"
 	"net/http"
 	"os"
 	"time"
+
+	"github.com/XciD/loxone-prometheus-exporter/config"
 
 	loxone "github.com/XciD/loxone-ws"
 	"github.com/bep/debounce"
@@ -40,12 +41,12 @@ func main() {
 		FullTimestamp: true,
 	})
 
-	// Parse arguments
-	host := flag.String("host", "", "Loxone Host Name")
-	user := flag.String("user", "", "Loxone User Name")
-	password := flag.String("password", "", "Loxone Password")
-
-	flag.Parse()
+	// Read config
+	cfg, err := config.NewConfig()
+	if err != nil {
+		log.Error(err)
+		return
+	}
 
 	// Start prometheus server
 	http.Handle("/metrics", promhttp.Handler())
@@ -54,7 +55,7 @@ func main() {
 	prometheus.MustRegister(values)
 
 	// Open socket
-	lox, err := loxone.New(*host, *user, *password)
+	lox, err := loxone.New(cfg.Host, cfg.User, cfg.Password)
 
 	if err != nil {
 		log.Error(err)

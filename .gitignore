@@ -21,3 +21,6 @@ build/**
 *.coverprofile
 */*.coverprofile
 coverage.txt
+
+# Config files
+loxone-prometheus-exporter.yml
