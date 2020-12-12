@@ -132,7 +132,7 @@ func main() {
 		select {
 		case <-ctx.Done():
 			log.Infof("Shutting Down")
-		case event := <-lox.Events:
+		case event := <-lox.GetEvents():
 			if eventMetric, ok := globalStates[event.UUID]; ok {
 				eventMetric.update(event.Value)
 			} else {
