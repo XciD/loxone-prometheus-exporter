@@ -23,6 +23,7 @@ func (e *ReadConfigErr) Error() string {
 // Config holds our config values
 type Config struct {
 	Host     string
+	Port     int
 	User     string
 	Password string
 }
@@ -35,6 +36,7 @@ func NewConfig() (*Config, error) {
 	// Flags
 	pflag.String("configFile", "", "Path and name of Config")
 	pflag.String("host", "", "URL of the Miniserver")
+	pflag.Int("port", 8080, "Port of the Miniserver")
 	pflag.String("user", "", "Username for Miniserver")
 	pflag.String("password", "", "Password for Miniserver")
 	pflag.Parse()

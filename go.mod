@@ -1,9 +1,9 @@
 module github.com/XciD/loxone-prometheus-exporter
 
-go 1.12
+go 1.16
 
 require (
-	github.com/XciD/loxone-ws v0.0.0-20201212110150-6d0f8f7cc7c7
+	github.com/XciD/loxone-ws v0.0.0-20210223082315-289a21695dbc
 	github.com/bep/debounce v1.2.0
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/mitchellh/mapstructure v1.4.0 // indirect

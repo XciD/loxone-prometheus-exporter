@@ -1,4 +1,4 @@
-FROM golang:1.11-stretch as builder
+FROM golang:1.16 as builder
 
 ENV PROJECT github.com/XciD/loxone-prometheus-exporter
 ENV GO111MODULE on

@@ -55,7 +55,7 @@ func main() {
 	prometheus.MustRegister(values)
 
 	// Open socket
-	lox, err := loxone.New(cfg.Host, cfg.User, cfg.Password)
+	lox, err := loxone.New(cfg.Host, cfg.Port, cfg.User, cfg.Password)
 
 	if err != nil {
 		log.Error(err)
